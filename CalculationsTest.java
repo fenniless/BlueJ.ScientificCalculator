@@ -193,4 +193,31 @@ public class CalculationsTest{
         
         Assert.assertEquals(expected, actual, 0);
     }
+    @Test
+    public void testsin(){
+        double firstNum = 5;
+        
+        double expected = -0.9589242746631385;
+        double actual = Calculations.sin(firstNum);
+        
+        Assert.assertEquals(expected, actual, 0);
+    }
+    @Test
+    public void testcos(){
+        double firstNum = 5;
+        
+        double expected = 0.28366218546322625;
+        double actual = Calculations.cos(firstNum);
+        
+        Assert.assertEquals(expected, actual, 0);
+    }
+    @Test
+    public void testtan(){
+        double firstNum = 5;
+        
+        double expected = -3.380515006246586;
+        double actual = Calculations.tan(firstNum);
+        
+        Assert.assertEquals(expected, actual, 0);
+    }
 }

@@ -1,3 +1,4 @@
+
  
 /**
  * These are all the methods the user can call on
@@ -51,4 +52,21 @@ public class Calculations
     {
         return -firstNum;
     }
+    
+        public static double sin(double firstNum)
+    {
+        return Math.sin(firstNum);
+    }
+    
+        public static double cos(double firstNum)
+    {
+        return Math.cos(firstNum);
+    }
+    
+        public static double tan(double firstNum)
+    {
+        return Math.tan(firstNum);
+    }
+
+    
 }
