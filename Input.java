@@ -12,6 +12,7 @@ public class Input {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
+        double state = 0;
         String pattern = ("(-)?((\\d+)(\\.\\d+)?)\\s*([+\\-÷−*x·/])\\s*(-)?((\\d+)(\\.\\d+)?)");
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(input);
@@ -24,7 +25,7 @@ public class Input {
         double unsignedFirstNum = Double.parseDouble(stringNum1);
         double unsignedSecondNum = Double.parseDouble(stringNum2);
         double result = 0.0;
-        if (stringOp.equals("/") && unsignedSecondNum == 0){System.out.print("Error! Please don't divide by zero.");
+        if (stringOp.equals("/") && unsignedSecondNum == 0){System.out.println("Error! Please don't divide by zero.");
         } else {
             switch(stringOp) {
                 case"+": result = calc.add(unsignedFirstNum,unsignedSecondNum);
@@ -36,11 +37,12 @@ public class Input {
                 case"/": result = calc.divide(unsignedFirstNum,unsignedSecondNum);
                 break;
                 case"^": result = calc.pow(unsignedFirstNum,unsignedSecondNum);
-                break;}
-            if ((m.find(1) ^ m.find(6)) && unsignedSecondNum != 0){result = -1 * result;
+                break;
+            }
+            if (m.find(1) ^ m.find(6) && unsignedSecondNum != 0){result = -1 * result;
             }
             double memoryResult = result;
-            System.out.print(result);
+            System.out.println(result);
             result = 0.0;
         }
     }
