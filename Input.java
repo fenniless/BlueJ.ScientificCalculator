@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Input {
     private static Calculations calc = new Calculations();
-    public static void main(String[] args) {
+    public static double userInput(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         double state = 0;
@@ -73,5 +73,6 @@ public class Input {
         double memoryResult = result;
         System.out.println(result);
         result = 0.0;
+        return result;
     }
 }
